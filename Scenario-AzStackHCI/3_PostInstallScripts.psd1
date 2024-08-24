@@ -9,12 +9,12 @@
             @{
                 stepHeadline       = 'Step1 - PrepareAdminBox'              # This needs to be adjusted to your network!!!!
                 scriptFilePath     = 'step_PrepareAdminBox.ps1'
-                scriptArgumentList = @('Ext', 'aMGMT', '172.31.100.1/16', '172.31.0.1', '8.8.8.8')  # ??? This needs to be adjusted to your network!!!!
+                scriptArgumentList = @('Ext', 'aMGMT', '192.168.0.250/24', '192.168.0.1', '8.8.8.8')  # ??? This needs to be adjusted to your network!!!!
                 requiresRestart    = $false                                                    # external adapter name (don't change), internal adapter name (don't change), assign an external adapter IP (routable on your network), external adatper gateway (router on your network), google DNS will be used as upstream DNS
             }
             @{
                 stepHeadline       = 'Step2 - This will create a domain '
-                scriptArgumentList = @('HCI00.org', '....A complex PWD please.......' )        # ??? Don't change: domain name, !!!!Add!!! a password for the domain admin account
+                scriptArgumentList = @('mylab.com', 'm_470121Q@' )        # ??? Don't change: domain name, !!!!Add!!! a password for the domain admin account
                 scriptFilePath     = 'step_CreateDomain.ps1'
                 requiresRestart    = $false
             }
@@ -44,7 +44,7 @@
             }#>
             @{
                 stepHeadline       = 'Step2 - Create another local admin account'
-                scriptArgumentList = @('asLocalAdmin', '....A complex PWD please.......' )     # ??? Azure Stack HCI local admin account to be used in Azure deployment
+                scriptArgumentList = @('asLocalAdmin', 'm_470121HCI@' )     # ??? Azure Stack HCI local admin account to be used in Azure deployment
                 scriptFilePath     = 'step_AzLocalAdmin.ps1'
                 requiresRestart    = $false
             }
@@ -64,7 +64,7 @@
             }
             @{
                 stepHeadline       = 'Step2 - Create another local admin account'
-                scriptArgumentList = @('asLocalAdmin', '....A complex PWD please.......' )     # ??? Azure Stack HCI local admin account to be used in Azure deployment
+                scriptArgumentList = @('asLocalAdmin', 'm_470121HCI@' )     # ??? Azure Stack HCI local admin account to be used in Azure deployment
                 scriptFilePath     = 'step_AzLocalAdmin.ps1'
                 requiresRestart    = $false
             }

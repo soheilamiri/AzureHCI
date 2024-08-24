@@ -5,11 +5,11 @@
 ##########################################################
 
 # 1. Create a golden image and adjust these variables
-$GoldenImage = "c:\.....\W2k22.vhdx"       # ??? path to a sysprepped virtual hard disk (UEFI i.e. Gen2 VMs) to be used as a golden image
-$vmDirectoryPrefix = "c:\.....your VM storage....\AzStack"   # ??? generic path where the VMs will be created - each VM gets its subfolder
+$GoldenImage = "D:\hyper-v\Temp-windows-2022-STD-GUI.vhdx"       # ??? path to a sysprepped virtual hard disk (UEFI i.e. Gen2 VMs) to be used as a golden image
+$vmDirectoryPrefix = "D:\hyper-v\AZStackHCI"   # ??? generic path where the VMs will be created - each VM gets its subfolder
 
 # 2. Provide a complex generic local admin pwd
-$adminPassword = '....A complex PWD please.......'   # ??? use single quotes to avoid PS special chars interpretation problems (e.g. $ in pwd problems)
+$adminPassword = 'm_470121HCI@'   # ??? use single quotes to avoid PS special chars interpretation problems (e.g. $ in pwd problems)
 
 # 3. Navigate to the config files and adjust them to your needs
 $currentPath = (Get-Location).Path
